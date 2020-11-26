@@ -11,16 +11,29 @@ app.use("/",express.static("static"));
   
 // Create a server
 var server = http.createServer(app);
-  
+
+if (process.env.disableEditor == 'false'){
+  var disableEditor = false
+} else {
+  var disableEditor = true
+}
 // Create the settings object 
 var settings = {
     httpAdminRoot:"/admin",
     httpNodeRoot: "/",
-    disableEditor: process.env.disableEditor,
+    disableEditor: disableEditor,
     userDir:"./",
     flowFile: 'flows.json',
     credentialSecret: process.env.credentialSecret,
-    functionGlobalContext: { }    
+    functionGlobalContext: { },
+    adminAuth: {
+      type: "credentials",
+      users: [{
+            username: process.env.adminUser,
+            password: bcrypt.hashSync(process.env.adminPassword, 8),
+            permissions: "*"
+          }]
+    } 
 }
 console.log(settings)
   // Initialise the runtime with a server and settings
