@@ -2,7 +2,8 @@ const PORT = process.env.PORT || 5000
 var http = require('http');
 var express = require("express");
 var RED = require("node-red");
-  
+const bcrypt = require('bcrypt');
+
 // Create an Express app
 var app = express();
   

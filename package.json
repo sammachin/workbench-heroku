@@ -1,6 +1,6 @@
 {
   "name": "workbench-heroku",
-  "version": "0.4.0",
+  "version": "0.4.1",
   "description": "A Scaffold of a NodeRED Runtime for Heroku ",
   "engines": {
     "node": "12.x"
