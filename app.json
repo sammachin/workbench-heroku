@@ -1,0 +1,26 @@
+{
+    "env": {
+      "disableEditor": {
+        "description": "Set to false enable the editor on /admin.",
+        "value": true
+      },
+      "adminUser": {
+        "description": "Set to false enable the editor on /admin.",
+        "value": "admin"
+      },
+      "adminPassword": {
+        "description": "Set to false enable the editor on /admin.",
+        "value": ""
+      },
+      "credentialSecret": {
+        "description": "The secrret used to encrypt credentials.",
+        "value": ""
+      },
+      "EXTERNALURL": {
+        "description": "The address the app is running on eg https://example.herokuapp.com",
+        "value": ""
+      }
+
+    }
+  }
+  
